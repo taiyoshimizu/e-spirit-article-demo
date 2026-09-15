@@ -23,7 +23,7 @@
     .layout{max-width:1180px;margin:0 auto;padding:38px 22px 90px;display:grid;grid-template-columns:minmax(0,800px) 260px;gap:44px;align-items:start}
     .article{background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:54px 64px 68px}.article-head{padding-bottom:28px;border-bottom:1px solid var(--line);margin-bottom:28px}
     .eyebrow{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--accent);margin-bottom:10px}
-    h1{font-size:34px;line-height:1.45;letter-spacing:-.02em;margin:0 0 18px}h2{font-size:26px;line-height:1.5;margin:54px 0 20px;padding-left:15px;border-left:5px solid var(--accent);letter-spacing:-.01em}h3{font-size:20px;line-height:1.55;margin:34px 0 14px;color:var(--navy)}
+    h1{font-size:34px;line-height:1.45;letter-spacing:-.02em;margin:0 0 18px}h2{font-size:26px;line-height:1.5;margin:54px 0 20px;padding-left:15px;border-left:5px solid var(--accent);letter-spacing:-.01em}h3{position:relative;font-size:20px;line-height:1.55;margin:36px 0 16px;padding:10px 14px 10px 18px;color:var(--navy);background:#f8fafc;border:1px solid #edf0f3;border-radius:10px}h3::before{content:'';position:absolute;left:0;top:10px;bottom:10px;width:4px;border-radius:4px;background:var(--accent)}
     p{font-size:16px;margin:0 0 18px}.lead{font-size:17px;line-height:2}.hl{background:linear-gradient(transparent 58%,var(--hl) 58%);padding:0 .06em}
     .note-box{margin:22px 0 6px;background:#fff9e8;border:1px solid #f4df96;border-radius:14px;padding:18px 20px}.note-box-title{font-size:12px;font-weight:900;color:#8a5c00;letter-spacing:.08em;margin-bottom:6px}.note-box p{margin:0}
     .toc{margin:30px 0 4px;background:#fafbfc;border:1px solid var(--line);border-radius:14px;padding:20px 22px}.toc-title{font-weight:800;font-size:14px;margin-bottom:8px}.toc ol{margin:0;padding-left:22px}.toc li{font-size:14px;margin:3px 0}.toc a{text-decoration:none;color:#344054}.toc a:hover{text-decoration:underline}
@@ -34,7 +34,7 @@
     .article-figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);background:#fff}
     .fc-mark{display:inline-flex;align-items:center;justify-content:center;vertical-align:super;margin-left:4px;width:19px;height:19px;border:0;border-radius:50%;background:var(--fc);color:#fff;font-weight:800;font-size:11px;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(47,111,237,.25)}
     .fc-target{border-radius:6px;transition:background .25s ease}.fc-target.active{background:var(--fc-soft)}
-    .cta{margin-top:46px;padding:30px;border-radius:16px;background:linear-gradient(135deg,#172b46,#0f1e31);color:#fff}.cta h2{border:0;padding:0;margin:0 0 12px;color:#fff;font-size:24px}.cta p{color:#e4e8ef;margin-bottom:0}
+    .cta{margin-top:46px;padding:0;border-radius:16px;background:linear-gradient(135deg,#172b46,#0f1e31);color:#fff;overflow:hidden}.cta-link{display:block;padding:30px;text-decoration:none;color:inherit;transition:opacity .2s ease}.cta-link:hover{opacity:.92}.cta h2{border:0;padding:0;margin:0 0 12px;color:#fff;font-size:24px}.cta p{color:#e4e8ef;margin-bottom:0}
     .refs{margin-top:42px;padding-top:26px;border-top:1px solid var(--line)}.refs h2{font-size:20px;border-left:0;padding-left:0;margin:0 0 12px}.refs ul{margin:0;padding-left:20px;color:#475467}.refs li{margin:5px 0;font-size:14px}
     .side{position:sticky;top:82px}.side-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}.side-label{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.08em;margin-bottom:8px}.side-title{font-weight:800;line-height:1.5;margin-bottom:14px}.side-meta{display:grid;gap:9px;font-size:13px;color:#475467}.side-meta div{display:flex;justify-content:space-between;gap:10px;border-top:1px solid #f0f1f3;padding-top:9px}
     .float-comment{position:fixed;right:24px;bottom:24px;z-index:40;border:0;background:var(--navy);color:#fff;border-radius:999px;padding:13px 18px;display:flex;align-items:center;gap:9px;font-weight:800;cursor:pointer;box-shadow:0 12px 30px rgba(18,32,51,.25)}.count{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:var(--accent);font-size:12px}
@@ -57,7 +57,8 @@
       <div class="eyebrow">SAMPLE ARTICLE</div>
       <h1>タレント起用の効果とは？広告で成果につなげる選び方と注意点</h1>
       <p class="lead">タレント起用を成功させるうえで、最初に決めるべきなのは「誰を起用するか」ではありません。まず、<span class="hl">誰に、どんな印象や行動変化を起こしたいのか</span>を決め、その目的に合う人物を選ぶことが重要です。</p>
-      <p class="lead fc-target" id="fact-1">著名人を起用した広告の研究でも、効果は一律ではなく、人物と商品・ブランドの相性などによって変わることが示されています。<button class="fc-mark" data-comment="1" aria-label="コメント1">1</button> 本記事では、タレント起用が向いているケースから、人選、費用・契約、起用後の広告設計まで、実務の順番に沿って整理します。</p>
+      <p class="lead fc-target" id="fact-1">著名人を起用した広告の研究でも、効果は一律ではなく、人物と商品・ブランドの相性などによって変わることが示されています。<button class="fc-mark" data-comment="1" aria-label="コメント1">1</button></p>
+      <p class="lead">本記事では、タレント起用が向いているケースから、人選、費用・契約、起用後の広告設計まで、実務の順番に沿って整理します。</p>
       <div class="note-box"><div class="note-box-title">この記事のポイント</div><p><strong>タレント起用は「人選」から始めない。</strong> 目的 → ターゲット → タレントの役割 → 人選 → 契約 → 活用・効果測定の順で設計すると、起用理由と成果指標がぶれにくくなります。</p></div>
     </div>
 
@@ -71,6 +72,7 @@
         <li><a href="#design">タレント起用を広告成果につなげる設計</a></li>
         <li><a href="#who">タレント起用は誰に依頼するべきか</a></li>
         <li><a href="#espirit">イー・スピリットのタレント起用支援</a></li>
+        <li><a href="#summary">タレント起用は「人選」ではなく広告設計から始める</a></li>
       </ol>
     </nav>
 
@@ -80,7 +82,8 @@
       <p>タレント起用は、広告課題によって向き・不向きがあります。まず「タレントを使うか」ではなく、「今の課題を人の力で解決する必要があるか」を判断しましょう。</p>
 
       <h3>タレント起用が向いているケース</h3>
-      <p>特に相性がよいのは、短期間で認知を広げたいとき、ブランドの抽象的な価値を人物のイメージで伝えたいとき、これまで接点の少なかった層へ届けたいときです。人物そのものが広告を見る理由になり、商品やブランドを知る入口を作れます。</p>
+      <p>特に相性がよいのは、短期間で認知を広げたいとき、ブランドの抽象的な価値を人物のイメージで伝えたいとき、これまで接点の少なかった層へ届けたいときです。</p>
+      <p>人物そのものが広告を見る理由になり、商品やブランドを知る入口を作れます。</p>
       <table class="article-table">
         <thead><tr><th>広告課題</th><th>タレントに期待する役割</th><th>見るべき指標の例</th></tr></thead>
         <tbody>
@@ -91,8 +94,10 @@
       </table>
 
       <h3>タレント起用が向いていないケース</h3>
-      <p>一方で、タレント起用が向いていないのは、広告課題が「認知不足」や「ブランドイメージの形成」ではなく、商品そのものの魅力不足や価格、購入導線などにある場合です。こうした課題は、タレントを起用して露出を増やしても解決しにくいため、先に商品や導線を見直す必要があります。</p>
-      <p>また、ターゲットや訴求内容が定まっていない、広告を見た後の受け皿が整っていない、起用後に何を測るか決まっていない場合も、現時点ではタレント起用に向いているとはいえません。まず広告課題とゴールを整理し、タレントを起用する意味を明確にしてから検討することが重要です。</p>
+      <p>一方で、タレント起用が向いていないのは、広告課題が「認知不足」や「ブランドイメージの形成」ではなく、商品そのものの魅力不足や価格、購入導線などにある場合です。</p>
+      <p>こうした課題は、タレントを起用して露出を増やしても解決しにくいため、先に商品や導線を見直す必要があります。</p>
+      <p>また、ターゲットや訴求内容が定まっていない、広告を見た後の受け皿が整っていない、起用後に何を測るか決まっていない場合も、現時点ではタレント起用に向いているとはいえません。</p>
+      <p>まず広告課題とゴールを整理し、タレントを起用する意味を明確にしてから検討することが重要です。</p>
     </section>
 
     <section id="before">
@@ -112,14 +117,17 @@
       <h2>広告に起用するタレントの選び方</h2>
       <figure class="article-figure"><img src="./images/how-to-choose-talent.png" alt="広告に起用するタレントの選び方のインフォグラフィック" loading="lazy" /></figure>
       <h3>ターゲットとの相性</h3>
-      <p>候補者の知名度だけでなく、自社が届けたい層の中でどの程度知られ、どのように支持されているかを確認します。若年層向けの商品であれば、全国的な知名度より、対象層の中での支持やSNS上の反応が重要になることもあります。</p>
+      <p>候補者の知名度だけでなく、自社が届けたい層の中でどの程度知られ、どのように支持されているかを確認します。</p>
+      <p>若年層向けの商品であれば、全国的な知名度より、対象層の中での支持やSNS上の反応が重要になることもあります。</p>
 
       <h3>ブランドとの相性</h3>
       <p>タレントが持つイメージと、ブランドが伝えたい印象が一致しているかを見ます。たとえば、信頼感を高めたいのか、親しみを持たせたいのか、専門性を補強したいのかで適した人物は変わります。</p>
-      <p class="fc-target" id="fact-2">Knoll &amp; Matthes（2017）は、2016年4月までに公表された46件の研究、計10,357人を対象に、著名人起用の効果をメタ分析しています。その結果、起用する人物と商品・ブランドの適合度などの条件によって、消費者の態度への効果が大きく異なることが示されました。したがって、知名度だけでなく、「その人物と商品・ブランドの組み合わせに納得感があるか」まで確認することが重要です。<button class="fc-mark" data-comment="1" aria-label="コメント1">1</button></p>
+      <p class="fc-target" id="fact-2">Knoll &amp; Matthes（2017）は、2016年4月までに公表された46件の研究、計10,357人を対象に、著名人起用の効果をメタ分析しています。その結果、起用する人物と商品・ブランドの適合度などの条件によって、消費者の態度への効果が大きく異なることが示されました。<button class="fc-mark" data-comment="1" aria-label="コメント1">1</button></p>
+      <p>したがって、知名度だけでなく、「その人物と商品・ブランドの組み合わせに納得感があるか」まで確認することが重要です。</p>
 
       <h3>広告で担う役割との相性</h3>
-      <p>「広告に出てもらう」だけではなく、何をしてもらうかまで確認します。商品を説明するなら説得力、SNSで発信してもらうなら普段の発信内容やファンとの関係性、イベントならトークや場づくりの力など、役割によって評価軸が変わります。</p>
+      <p>「広告に出てもらう」だけではなく、何をしてもらうかまで確認します。</p>
+      <p>商品を説明するなら説得力、SNSで発信してもらうなら普段の発信内容やファンとの関係性、イベントならトークや場づくりの力など、役割によって評価軸が変わります。</p>
 
       <h3>契約・実行のしやすさ</h3>
       <p>企画に合う人物でも、競合契約、出演スケジュール、使用したい媒体や期間によっては起用できません。候補者を絞る段階で実務条件まで確認し、企画として実現できる人物かを判断します。</p>
@@ -130,7 +138,8 @@
       <h2>タレント起用の費用と契約で確認するポイント</h2>
       <figure class="article-figure"><img src="./images/cost-and-contract.png" alt="タレント起用の費用と契約で確認するポイントのインフォグラフィック" loading="lazy" /></figure>
       <h3>費用は出演料だけでは決まらない</h3>
-      <p>タレント起用の費用は、人物の知名度だけでなく、使用する媒体、契約期間、地域、競合制限、撮影内容、SNS投稿の有無などによって変わります。そのため、「このタレントはいくらか」だけを先に聞くより、どのように使いたいかを整理して見積もる方が現実的です。</p>
+      <p>タレント起用の費用は、人物の知名度だけでなく、使用する媒体、契約期間、地域、競合制限、撮影内容、SNS投稿の有無などによって変わります。</p>
+      <p>そのため、「このタレントはいくらか」だけを先に聞くより、どのように使いたいかを整理して見積もる方が現実的です。</p>
 
       <h3>契約前に利用範囲を具体化する</h3>
       <p class="fc-target" id="fact-3">広告出演契約では、使用媒体、使用期間、競合条件などを事前に整理する必要があります。JMAAのガイドラインでも、これらを発注時に明確にする考え方が示されています。<button class="fc-mark" data-comment="2" aria-label="コメント2">2</button></p>
@@ -150,15 +159,18 @@
       <h2>タレント起用を広告成果につなげる設計</h2>
       <figure class="article-figure"><img src="./images/ad-design-flow.png" alt="タレント起用を広告成果につなげる設計のインフォグラフィック" loading="lazy" /></figure>
       <h3>タレントと商品を同時に記憶してもらう</h3>
-      <p>タレントの存在感が強いほど、「出演していた人は覚えているが、何の広告だったか分からない」という状態が起こり得ます。クリエイティブでは、タレントの役割を商品特徴やブランドメッセージと結び付ける必要があります。</p>
+      <p>タレントの存在感が強いほど、「出演していた人は覚えているが、何の広告だったか分からない」という状態が起こり得ます。</p>
+      <p>クリエイティブでは、タレントの役割を商品特徴やブランドメッセージと結び付ける必要があります。</p>
       <p>「この人だから、この商品のこの価値を伝える」という関係を作ると、タレントの印象をブランド側へ残しやすくなります。</p>
 
       <h3>広告を見た後の導線まで設計する</h3>
-      <p>テレビCMやSNSで注目を集めても、その後に詳しい情報を得られる場所や行動先がなければ、関心は離れてしまいます。CM → Webサイト、SNS → 特設ページ、イベント → 店舗・ECなど、接点をつなげて設計します。</p>
+      <p>テレビCMやSNSで注目を集めても、その後に詳しい情報を得られる場所や行動先がなければ、関心は離れてしまいます。</p>
+      <p>CM → Webサイト、SNS → 特設ページ、イベント → 店舗・ECなど、接点をつなげて設計します。</p>
       <p>同じ素材をすべての媒体に流用するのではなく、媒体ごとに「認知」「理解」「比較」「行動」のどこを担うのかを決めると、タレントを複数接点で活用しやすくなります。</p>
 
       <h3>KPIは起用前に決める</h3>
-      <p>広告公開後に成果指標を決めると、都合のよい数字だけを見ることになりやすいため、起用前にKPIを設定します。認知が目的なら広告認知や指名検索、Web送客ならサイト流入、販売促進なら問い合わせや購入など、目的と指標を対応させます。</p>
+      <p>広告公開後に成果指標を決めると、都合のよい数字だけを見ることになりやすいため、起用前にKPIを設定します。</p>
+      <p>認知が目的なら広告認知や指名検索、Web送客ならサイト流入、販売促進なら問い合わせや購入など、目的と指標を対応させます。</p>
       <p><span class="hl">タレント起用の評価は「話題になったか」ではなく、最初に決めた広告目的をどこまで動かせたかで行う</span>のが基本です。</p>
     </section>
 
@@ -180,19 +192,22 @@
     <section id="espirit">
       <h2>イー・スピリットのタレント起用支援</h2>
       <p class="fc-target" id="fact-4">イー・スピリットは、キャスティングを単なる「人の手配」ではなく、商品理解・課題整理・ターゲット設定から考える広告戦略の一部として位置づけています。<button class="fc-mark" data-comment="3" aria-label="コメント3">3</button></p>
-      <p class="fc-target" id="fact-5">候補者選定では、広告契約状況や出演情報、SNSデータ、社内独自情報などを蓄積する「e-Spirit Now」を活用しています。また、全国1,200社超の芸能事務所ネットワークと6万人超のタレントデータベースを掲げており、複数候補の比較からオーディション、交渉・契約まで幅広く対応しています。<button class="fc-mark" data-comment="4" aria-label="コメント4">4</button></p>
+      <p class="fc-target" id="fact-5">候補者選定では、広告契約状況や出演情報、SNSデータ、社内独自情報などを蓄積する「e-Spirit Now」を活用しています。<button class="fc-mark" data-comment="4" aria-label="コメント4">4</button></p>
+      <p>また、全国1,200社超の芸能事務所ネットワークと6万人超のタレントデータベースを掲げており、複数候補の比較からオーディション、交渉・契約まで幅広く対応しています。</p>
       <p>「誰を起用するか」からではなく、広告目的に合う人物を探し、契約や活用まで一貫して進めたい場合は、企画段階から相談する方法があります。</p>
     </section>
 
-    <section>
+    <section id="summary">
       <h2>タレント起用は「人選」ではなく広告設計から始める</h2>
       <p>タレント起用の成否は、知名度の高さだけでは決まりません。広告目的とターゲットを整理し、その中でタレントに担ってもらう役割を決め、目的に合う人物を選ぶことが出発点です。</p>
       <p>さらに、媒体・契約期間・競合条件などを事前に整理し、広告を見た後の導線とKPIまで設計しておくことで、タレント起用を単発の話題づくりではなく、広告成果につながる施策として運用しやすくなります。</p>
     </section>
 
     <section class="cta">
-      <h2>タレント起用について相談する</h2>
-      <p>イー・スピリットでは、起用する人物が決まっていない企画段階から、商品・ターゲット・広告課題に合わせたキャスティングを相談できます。</p>
+      <a class="cta-link" href="https://www.e-spirit.jp/information" target="_blank" rel="noopener">
+        <h2>タレント起用について相談する</h2>
+        <p>イー・スピリットでは、起用する人物が決まっていない企画段階から、商品・ターゲット・広告課題に合わせたキャスティングを相談できます。</p>
+      </a>
     </section>
 
     <section class="refs">
